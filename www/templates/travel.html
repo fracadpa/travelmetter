@@ -1,0 +1,24 @@
+<ion-view view-title="Viajar">
+  <ion-content data-tap-disabled="true">
+    <div class="button-bar">
+      <button class="button button-calm" ng-click="centerOnMe()">Donde estoy?</button>      
+      <button class="button button-positive" ng-click="startTracking()" ng-disabled="isTracking">Iniciar</button>
+      <button class="button button-assertive" ng-click="stopTracking()" ng-disabled="!isTracking">Parar</button>
+    </div>
+     
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' >
+      <ui-gmap-marker 	idkey="marker.id" 
+      					coords="marker.coords"
+      					options="marker.options"
+      					>
+      </ui-gmap-marker>
+      <ui-gmap-polylines models="polys" path="'path'" stroke="'stroke'" visible="'visible'"
+                          geodesic="'geodesic'" editable="'editable'" draggable="'draggable'" static="true" >
+      </ui-gmap-polylines>        
+    </ui-gmap-google-map>
+
+    <strong>Log:</strong> {{msglog}}<br />
+    <strong>Info:</strong> {{msgInfo}}<br />
+        
+  </ion-content>
+</ion-view>

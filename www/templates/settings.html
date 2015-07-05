@@ -1,0 +1,43 @@
+<ion-view view-title="Configuración">
+  <ion-content>
+  	<form novalidate class="simple-form">
+		<div class="list">
+		  <label class="item item-input">
+		    <span class="input-label calm">Seg. Carrera Mínima:</span>
+	     	<input type="number" ng-model="globalSettings.segMinTravel">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Mtrs. Carrera Mínima:</span>
+	     	<input type="number" ng-model="globalSettings.mtrMinTravel">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Unidad Carga Tiempo:</span>
+	     	<input type="number" ng-model="globalSettings.unitTime">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Unidad Carga Metros:</span>
+	     	<input type="number" ng-model="globalSettings.unitMtr">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Carga Metros:</span>
+	     	<input type="number" ng-model="globalSettings.mtrCharge">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Carga Tiempo:</span>
+	     	<input type="number" ng-model="globalSettings.segCharge">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Valor Min Seg:</span>
+	     	<input type="number" ng-model="globalSettings.segMinValueCharge">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label calm">Valor Min Mtr:</span>
+	     	<input type="number" ng-model="globalSettings.mtrMinValueCharge">
+		  </label>
+		</div>
+		<button class="button button-full button-calm" ng-click="saveSettings(globalSettings)" >
+		  Guardar
+		</button>
+  	</form>  	
+  </ion-content>
+</ion-view>
